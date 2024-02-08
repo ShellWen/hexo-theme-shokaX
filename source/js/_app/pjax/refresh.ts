@@ -56,7 +56,7 @@ export const siteRefresh = (reload) => {
 
   postBeauty()
   tabFormat()
-  if (typeof mediaPlayer !== 'undefined') {
+  if (typeof mediaPlayer !== 'undefined' && !CONFIG.noPlayer) {
     toolPlayer.player.load(LOCAL.audio || CONFIG.audio || {})
   }
   Loader.hide()
